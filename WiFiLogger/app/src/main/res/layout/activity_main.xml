@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="bathurst.oliver.wifilogger.Main">
+
+    <TextView
+        android:id="@+id/log"
+        android:layout_width="286dp"
+        android:layout_height="146dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.988"
+        tools:ignore="HardcodedText,MissingConstraints,RtlHardcoded" />
+
+    <Button
+        android:id="@+id/refresh"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        android:layout_marginLeft="7dp"
+        android:background="@android:drawable/ic_popup_sync"
+        android:backgroundTint="@android:color/black"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:ignore="MissingConstraints,RtlHardcoded"
+        tools:layout_editor_absoluteY="16dp"
+        android:layout_above="@+id/log"
+        android:layout_alignEnd="@+id/log" />
+
+    <Button
+        android:id="@+id/add"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        android:layout_marginLeft="152dp"
+        android:layout_marginRight="8dp"
+        android:background="@android:drawable/ic_input_add"
+        android:backgroundTint="@android:color/holo_green_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.127"
+        tools:ignore="MissingConstraints,RtlHardcoded"
+        android:layout_above="@+id/list"
+        android:layout_alignEnd="@+id/log" />
+
+    <Button
+        android:id="@+id/sav"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        android:layout_marginRight="8dp"
+        android:background="@android:drawable/ic_menu_save"
+        android:backgroundTint="@android:color/black"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:ignore="MissingConstraints,RtlHardcoded"
+        tools:layout_editor_absoluteY="9dp"
+        android:layout_above="@+id/log"
+        android:layout_alignStart="@+id/log" />
+
+    <TextView
+        android:id="@+id/wifiName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/noData"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:ignore="HardcodedText,MissingConstraints"
+        android:layout_above="@+id/linkSpeed"
+        android:layout_marginBottom="19dp"
+        android:layout_alignEnd="@+id/del"
+        android:layout_alignStart="@+id/list" />
+
+    <TextView
+        android:id="@+id/logTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/log"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="MissingConstraints,RtlHardcoded"
+        android:layout_above="@+id/log"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/frequency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/noData"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wifiName"
+        tools:ignore="HardcodedText,MissingConstraints"
+        android:layout_above="@+id/signalStrength"
+        android:layout_marginBottom="16dp"
+        android:layout_alignStart="@+id/list"
+        android:layout_toStartOf="@+id/refresh" />
+
+    <TextView
+        android:id="@+id/linkSpeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/noData"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frequency"
+        tools:ignore="HardcodedText,MissingConstraints"
+        android:layout_marginBottom="17dp"
+        android:layout_above="@+id/frequency"
+        android:layout_alignEnd="@+id/del"
+        android:layout_alignStart="@+id/list" />
+
+    <TextView
+        android:id="@+id/signalStrength"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/noData"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linkSpeed"
+        tools:ignore="HardcodedText,MissingConstraints"
+        android:layout_alignTop="@+id/add"
+        android:layout_alignStart="@+id/list"
+        android:layout_toStartOf="@+id/refresh" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/app_name"
+        android:textSize="24sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints"
+        android:layout_above="@+id/wifiName"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/del"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/delete"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.395"
+        android:layout_above="@+id/refresh"
+        android:layout_alignStart="@+id/sav"
+        android:layout_alignEnd="@+id/refresh" />
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="284dp"
+        android:layout_height="46dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/back"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.532"
+        android:layout_above="@+id/del"
+        android:layout_alignStart="@+id/del"
+        android:layout_alignEnd="@+id/add" />
+
+    <Button
+        android:id="@+id/upload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/ic_menu_upload"
+        android:layout_above="@+id/add"
+        android:layout_alignEnd="@+id/add"
+        android:layout_alignStart="@+id/add" />
+
+    <Button
+        android:id="@+id/exit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/del"
+        android:background="@android:drawable/ic_delete" />
+</RelativeLayout>

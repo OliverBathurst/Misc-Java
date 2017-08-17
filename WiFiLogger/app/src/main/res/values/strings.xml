@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">WiFiLogger</string>
+    <string name="log">Log</string>
+    <string name="noData">Not Available</string>
+    <string name="sigStr">Signal Strength: </string>
+    <string name="ssid">SSID: </string>
+    <string name="link">Link Speed: </string>
+    <string name="freq">Frequency: </string>
+    <string name="mega"> MHz</string>
+    <string name="megaBits"> Mbps</string>
+    <string name="delete">Delete</string>
+    <string name="strength"> dBm</string>
+</resources>
