@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:screenOrientation="portrait"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="uk.ac.reading.ft025024.fluct.CustomLevels">
+
+    <Button
+        android:id="@+id/play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/imageSwitcher"
+        android:backgroundTint="@android:color/transparent"
+        android:text="Play!"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/prevMap"
+        android:layout_width="55dp"
+        android:layout_height="34dp"
+        android:background="@android:drawable/ic_media_previous"
+        android:backgroundTint="@android:color/black"
+        android:layout_below="@+id/play"
+        android:layout_toStartOf="@+id/nextMap" />
+
+    <ImageSwitcher
+        android:id="@+id/imageSwitcher"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+    </ImageSwitcher>
+
+    <Button
+        android:id="@+id/rand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:backgroundTint="@android:color/transparent"
+        android:text="Randomise"
+        tools:ignore="HardcodedText"
+        android:layout_toEndOf="@+id/homingTimeoutSeekBar"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/nextMap"
+        android:layout_width="55dp"
+        android:layout_height="34dp"
+        android:background="@android:drawable/ic_media_next"
+        android:backgroundTint="@android:color/black"
+        android:layout_marginEnd="47dp"
+        android:layout_below="@+id/play"
+        android:layout_toStartOf="@+id/nextCraft" />
+
+    <Button
+        android:id="@+id/sav"
+        android:layout_width="54dp"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/ic_menu_save"
+        android:layout_alignTop="@+id/homingTimeoutSeekBar"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:id="@+id/nextCraft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/ic_media_next"
+        android:backgroundTint="@android:color/black"
+        android:layout_below="@+id/nextMap"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:id="@+id/prevCraft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/ic_media_previous"
+        android:backgroundTint="@android:color/black"
+        android:layout_below="@+id/prevMap"
+        android:layout_alignParentStart="true" />
+
+    <ImageSwitcher
+        android:id="@+id/craftSwitch"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/prevMap"
+        android:layout_alignBottom="@+id/nextCraft"
+        android:layout_alignStart="@+id/prevMap"
+        android:layout_alignEnd="@+id/nextMap" />
+
+    <CheckBox
+        android:id="@+id/homing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/homing_missiles"
+        android:textSize="12sp"
+        android:typeface="normal"
+        android:layout_below="@+id/settings"
+        android:layout_alignStart="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/settings"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        android:layout_below="@+id/prevCraft"
+        android:layout_alignEnd="@+id/prevCraft" />
+
+    <EditText
+        android:id="@+id/livesInt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberSigned"
+        android:layout_below="@+id/homing"
+        android:layout_toEndOf="@+id/textView4"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:id="@+id/livesEntry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lives"
+        android:textColor="@android:color/black"
+        android:textSize="12sp"
+        android:layout_alignBaseline="@+id/livesInt"
+        android:layout_alignBottom="@+id/livesInt"
+        android:layout_toStartOf="@+id/livesInt" />
+
+    <EditText
+        android:id="@+id/maxInt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/livesInt"
+        android:layout_toEndOf="@+id/prevMap"
+        android:ems="10"
+        android:inputType="numberSigned"
+        android:layout_alignStart="@+id/livesInt"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/maxInt"
+        android:layout_alignBottom="@+id/maxInt"
+        android:layout_toStartOf="@+id/nextCraft"
+        android:text="@string/max_on_screen"
+        android:textColor="@android:color/black"
+        android:textSize="12sp" />
+
+    <EditText
+        android:id="@+id/hardEnemChance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberSigned"
+        android:layout_alignBaseline="@+id/textView5"
+        android:layout_alignBottom="@+id/textView5"
+        android:layout_alignStart="@+id/craftSwitch"
+        android:layout_toStartOf="@+id/nextMap"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hard_enemy_chance"
+        android:textColor="@android:color/black"
+        android:textSize="12sp"
+        android:layout_alignBaseline="@+id/livesInt"
+        android:layout_alignBottom="@+id/livesInt"
+        android:layout_toStartOf="@+id/hardEnemChance" />
+
+    <SeekBar
+        android:id="@+id/playerFireSeekBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/hardEnemChance"
+        android:layout_alignStart="@+id/textView6"
+        android:layout_alignTop="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView5"
+        android:layout_below="@+id/hardEnemChance"
+        android:text="@string/player_fire_time"
+        android:textColor="@android:color/black"
+        android:textSize="12sp" />
+
+    <EditText
+        android:id="@+id/enemLivesText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/livesInt"
+        android:layout_alignParentEnd="true"
+        android:ems="10"
+        android:inputType="numberSigned"
+        android:layout_alignStart="@+id/livesInt"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:id="@+id/enemLives"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/homing"
+        android:layout_toStartOf="@+id/enemLivesText"
+        android:text="@string/enemy_lives"
+        android:textColor="@android:color/black"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/lifeFreq"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/playerFireSeekBar"
+        android:layout_below="@+id/playerFireSeekBar"
+        android:text="@string/lifeline_time"
+        android:textColor="@android:color/black"
+        android:textSize="12sp" />
+
+    <SeekBar
+        android:id="@+id/lifeFreqSeekBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/playerFireSeekBar"
+        android:layout_alignStart="@+id/lifeFreq"
+        android:layout_below="@+id/lifeFreq" />
+
+    <TextView
+        android:id="@+id/homingTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/lifeFreqSeekBar"
+        android:layout_below="@+id/lifeFreqSeekBar"
+        android:text="@string/homing_missile_timeout"
+        android:textColor="@android:color/black"
+        android:textSize="12sp" />
+
+    <SeekBar
+        android:id="@+id/homingTimeoutSeekBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/lifeFreqSeekBar"
+        android:layout_alignStart="@+id/homingTime"
+        android:layout_below="@+id/homingTime" />
+
+    <TextView
+        android:id="@+id/enemyFireTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/homingTimeoutSeekBar"
+        android:layout_below="@+id/homingTimeoutSeekBar"
+        android:text="@string/enemyFire_time"
+        android:textColor="@android:color/black"
+        android:textSize="12sp" />
+
+    <SeekBar
+        android:id="@+id/enemyFireFreqSeekBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/enemyFireTime"
+        android:layout_alignStart="@+id/enemyFireTime"
+        android:layout_alignEnd="@+id/homingTimeoutSeekBar" />
+
+</RelativeLayout>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:screenOrientation="portrait"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="uk.ac.reading.ft025024.fluct.LevelSelection"
+    tools:layout_editor_absoluteY="81dp"
+    tools:layout_editor_absoluteX="0dp">
+
+    <Button
+        android:id="@+id/customLvl"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/options"
+        android:layout_toStartOf="@+id/options"
+        android:alpha="1"
+        android:backgroundTint="@android:color/transparent"
+        android:text="@string/custom_level_generator"
+        android:textColor="@android:color/black" />
+
+    <Button
+        android:id="@+id/prevMap"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:alpha="1"
+        android:background="@android:drawable/ic_media_previous"
+        android:backgroundTint="@android:color/black"
+        android:textColor="@android:color/white"
+        android:layout_alignTop="@+id/nextMap"
+        android:layout_toStartOf="@+id/playgame" />
+
+    <Button
+        android:id="@+id/playgame"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:alpha="1"
+        android:background="@android:drawable/ic_media_play"
+        android:backgroundTint="@android:color/black"
+        android:textColor="@android:color/white"
+        tools:ignore="HardcodedText"
+        android:layout_above="@+id/userName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="142dp" />
+
+    <ImageSwitcher
+        android:id="@+id/imgsw"
+        style="@style/AlertDialog.AppCompat"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:alpha="1"
+        tools:ignore="UselessLeaf"
+        tools:layout_editor_absoluteX="7dp"
+        tools:layout_editor_absoluteY="16dp"
+        android:layout_above="@+id/prevMap"
+        android:layout_alignParentStart="true">
+
+    </ImageSwitcher>
+
+    <Button
+        android:id="@+id/nextMap"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:alpha="1"
+        android:background="@android:drawable/ic_media_next"
+        android:backgroundTint="@android:color/black"
+        android:textColor="@android:color/white"
+        android:layout_alignBottom="@+id/playgame"
+        android:layout_toEndOf="@+id/playgame"
+        android:layout_alignTop="@+id/playgame" />
+
+    <TextView
+        android:id="@+id/userName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textColor="@android:color/black"
+        android:textStyle="bold|italic"
+        tools:ignore="HardcodedText"
+        android:layout_alignBaseline="@+id/textView2"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_toStartOf="@+id/nextMap" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/player_name"
+        android:textAllCaps="false"
+        android:textColor="@android:color/black"
+        android:textStyle="bold|italic"
+        android:layout_marginEnd="21dp"
+        android:layout_marginBottom="15dp"
+        android:layout_above="@+id/customLvl"
+        android:layout_toStartOf="@+id/userName" />
+
+    <Button
+        android:id="@+id/mapDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/transparent"
+        android:text="@string/map_details"
+        android:layout_below="@+id/prevMap"
+        android:layout_alignEnd="@+id/nextMap"
+        android:layout_alignStart="@+id/prevMap" />
+
+    <Button
+        android:id="@+id/delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/nextMap"
+        android:layout_alignBottom="@+id/nextMap"
+        android:layout_alignParentEnd="true"
+        android:background="@android:drawable/ic_menu_delete" />
+
+    <Button
+        android:id="@+id/refresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/ic_menu_rotate"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/mapDetails"
+        android:layout_alignTop="@+id/delete" />
+
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mapDetails"
+        android:layout_alignEnd="@+id/mapDetails"
+        android:layout_alignStart="@+id/mapDetails" />
+
+</RelativeLayout>

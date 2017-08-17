@@ -1,0 +1,30 @@
+<resources>
+    <string name="fluct">Fluct</string>
+    <string name="noUser">No username entered</string>
+    <string name="userTooLong">Username too long</string>
+    <string name="custom_level_generator">Custom Level Generator</string>
+    <string name="player_name">Player Name:</string>
+    <string name="map_details">Level Details</string>
+    <string name="menu_title">menu</string>
+    <string name="levelTooLong">Level name too long (>10)</string>
+    <string name="levelNotEntered">No level name entered</string>
+    <string name="levelHere">Enter Level Name Here</string>
+    <string name="saveAs">Save As</string>
+    <string name="leaderboards">Leaderboard</string>
+    <string name="settings">Settings</string>
+    <string name="homing_missiles">Homing Missiles</string>
+    <string name="lives">Lives</string>
+    <string name="max_on_screen">Max On-Screen</string>
+    <string name="hard_enemy_chance">Hard Enemy %</string>
+    <string name="player_fire_time">Player Fire Time</string>
+    <string name="enemy_lives">Enemy Lives</string>
+    <string name="homing_missile_timeout">Homing Missile Timeout</string>
+    <string name="enemyFire_time">EnemyFire Time</string>
+    <string name="lifeline_time">Lifeline Time</string>
+    <string-array name="names">
+        <item>Select</item>
+        <item>Available Levels</item>
+        <item>Upload Scores</item>
+        <item>Download Additional Levels</item>
+    </string-array>
+</resources>

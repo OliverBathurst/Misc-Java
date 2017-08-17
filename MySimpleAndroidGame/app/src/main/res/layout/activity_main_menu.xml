@@ -1,0 +1,94 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:screenOrientation="portrait"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="uk.ac.reading.ft025024.fluct.MainMenu">
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/Website"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@android:color/transparent"
+            android:text="Website"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/Credits"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:backgroundTint="@android:color/transparent"
+            android:text="Credits"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/Play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="18dp"
+            android:backgroundTint="@android:color/transparent"
+            android:elevation="0dp"
+            android:text="Play"
+            tools:ignore="HardcodedText" />
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Name"
+            tools:ignore="HardcodedText,LabelFor"
+            android:layout_centerVertical="true"
+            android:layout_alignEnd="@+id/leader"
+            android:layout_alignStart="@+id/leader" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fluct"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:textSize="36sp"
+            android:typeface="monospace"
+            android:layout_marginBottom="51dp"
+            android:layout_alignBottom="@+id/editText"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Play"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"
+            android:textAllCaps="false"
+            android:textColor="@android:color/black" />
+
+        <Button
+            android:id="@+id/leader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/Credits"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="@android:color/transparent"
+            android:text="@string/leaderboards" />
+
+    </RelativeLayout>
+
+</merge>

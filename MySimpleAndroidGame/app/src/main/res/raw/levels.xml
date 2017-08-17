@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<levels>
+    <level name="Level 1">
+            <missiles>
+                <missile enabled="true"/>
+            </missiles>
+            <maps>
+                <map name="sea"/>
+            </maps>
+            <character>
+                <char name="mig"/>
+            </character>
+            <maxonscreen>
+                <max maximum="3"/>
+            </maxonscreen>
+            <lives>
+                <live count="3"/>
+            </lives>
+            <iscustom>
+                <custom customlevel="false"/>
+            </iscustom>
+            <enemy>
+                <enemylives enemlives = "6"/>
+                <enemyfiretime enemfiretime = "60"/>
+                <homingtime homingmisstime = "300"/>
+            </enemy>
+            <player>
+                <playerfiretime firetime = "30"/>
+                <lifeline lifefiretime = "500"/>
+            </player>
+            <spawn>
+                <hardenemy hardchance = "5"/>
+            </spawn>
+    </level>
+    <level name="Level 2">
+            <missiles>
+                <missile enabled="false"/>
+            </missiles>
+            <maps>
+                <map name="clouds"/>
+            </maps>
+            <character>
+                <char name="harrier"/>
+            </character>
+            <maxonscreen>
+                 <max maximum="3"/>
+            </maxonscreen>
+            <lives>
+                <live count="5"/>
+            </lives>
+            <iscustom>
+                <custom customlevel="false"/>
+            </iscustom>
+            <enemy>
+                <enemylives enemlives = "3"/>
+                <enemyfiretime enemfiretime = "130"/>
+                <homingtime homingmisstime = "300"/>
+            </enemy>
+            <player>
+                <playerfiretime firetime = "30"/>
+                <lifeline lifefiretime = "400"/>
+            </player>
+            <spawn>
+                <hardenemy hardchance = "15"/>
+            </spawn>
+    </level>
+    <level name="Level 3">
+        <missiles>
+            <missile enabled="true"/>
+        </missiles>
+        <maps>
+            <map name="fields"/>
+        </maps>
+        <character>
+            <char name="thunder"/>
+        </character>
+        <maxonscreen>
+            <max maximum="5"/>
+        </maxonscreen>
+        <lives>
+            <live count="9"/>
+        </lives>
+        <iscustom>
+            <custom customlevel="false"/>
+        </iscustom>
+        <enemy>
+            <enemylives enemlives = "4"/>
+            <enemyfiretime enemfiretime = "120"/>
+            <homingtime homingmisstime = "400"/>
+        </enemy>
+        <player>
+            <playerfiretime firetime = "30"/>
+            <lifeline lifefiretime = "400"/>
+        </player>
+        <spawn>
+            <hardenemy hardchance = "10"/>
+        </spawn>
+    </level>
+    <level name="Level 4">
+        <missiles>
+            <missile enabled="true"/>
+        </missiles>
+        <maps>
+            <map name="fields"/>
+        </maps>
+        <character>
+            <char name="thunder"/>
+        </character>
+        <maxonscreen>
+            <max maximum="5"/>
+        </maxonscreen>
+        <lives>
+            <live count="9"/>
+        </lives>
+        <iscustom>
+            <custom customlevel="false"/>
+        </iscustom>
+        <enemy>
+            <enemylives enemlives = "4"/>
+            <enemyfiretime enemfiretime = "120"/>
+            <homingtime homingmisstime = "400"/>
+        </enemy>
+        <player>
+            <playerfiretime firetime = "30"/>
+            <lifeline lifefiretime = "400"/>
+        </player>
+        <spawn>
+            <hardenemy hardchance = "25"/>
+        </spawn>
+    </level>
+</levels>
