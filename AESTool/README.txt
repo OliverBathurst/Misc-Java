@@ -1,0 +1,1 @@
+Simple encryption tool using AES 128 bit algorithm written in Java, use at your own risk
